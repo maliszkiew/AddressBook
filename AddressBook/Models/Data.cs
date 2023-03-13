@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Threading;
 using Newtonsoft.Json;
 
 namespace AddressBook.Models
@@ -10,10 +12,11 @@ namespace AddressBook.Models
         public List<ContactProfile> importedProfiles { get; set; }
         public Data()
         {
+
             importedProfiles = ImportData();
 
         }
-        public List<ContactProfile> ImportData(bool temp=false)
+        public List<ContactProfile> ImportData(bool temp = false)
         {
             if (!temp) //If importing data is not necessary in this instance, it's skipped
             {
@@ -50,12 +53,24 @@ namespace AddressBook.Models
         {
             string json = File.ReadAllText(Constants.CONTACTS_JSON);
             List<ContactProfile> objects = JsonConvert.DeserializeObject<List<ContactProfile>>(json);
-            objects.RemoveAll(p=>p.Id==_pID);
+            objects.RemoveAll(p => p.Id == _pID);
             json = JsonConvert.SerializeObject(objects);
             File.WriteAllText(Constants.CONTACTS_JSON, json);
-            if (File.Exists(Constants.IMAGE_PATH + _pID + ".jpeg")) File.Delete(Constants.IMAGE_PATH + _pID + ".jpeg");
-            
         }
-        
+
+        public static void GarbageCleaner()
+        {
+            string json = File.ReadAllText(Constants.CONTACTS_JSON);
+            List<ContactProfile> objects = JsonConvert.DeserializeObject<List<ContactProfile>>(json);
+            for (int i = 0; i <= objects.Count(); i++)
+            {
+                var List = objects.Where(p => p.Id == i).ToList();
+                if (List.Count == 0)
+                {
+                    if (File.Exists(Constants.IMAGE_PATH + i + ".jpeg")) File.Delete(Constants.IMAGE_PATH + i + ".jpeg");
+                }
+            }
+        }
+
     }
 }

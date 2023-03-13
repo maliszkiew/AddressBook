@@ -12,7 +12,7 @@ namespace AddressBook.Viewmodels
     {
         //INotifyPropertyChanged interface
         public event PropertyChangedEventHandler? PropertyChanged;
-        protected void OnPropertyChanged(string propertyName)   
+        protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
@@ -36,7 +36,7 @@ namespace AddressBook.Viewmodels
             {
                 _isNewProfile = true;
                 _profile = new ContactProfile();
-                ID =  ProfileVMImportedData.importedProfiles.Last().Id + 1;
+                ID = ProfileVMImportedData.importedProfiles.Last().Id + 1;
             }
             _imagePath = _profile.imagePath;
             if (string.IsNullOrEmpty(_imagePath) || !File.Exists(_imagePath)) _imagePath = Constants.IMAGE_PLACEHOLDER;
@@ -54,7 +54,7 @@ namespace AddressBook.Viewmodels
         {
             get => _imagePath;
             set
-            {   
+            {
                 _imagePath = value;
                 Profile.imagePath = value;
                 OnPropertyChanged(nameof(ImagePath));
@@ -71,7 +71,7 @@ namespace AddressBook.Viewmodels
                 OnPropertyChanged(nameof(Profile));
             }
         }
-        
+
         private int _id;
         public int ID
         {
@@ -79,7 +79,7 @@ namespace AddressBook.Viewmodels
             set
             {
                 _id = value;
-                _profile.Id= value;
+                _profile.Id = value;
                 OnPropertyChanged(nameof(ID));
             }
         }

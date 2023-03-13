@@ -26,12 +26,13 @@ namespace AddressBook.Viewmodels
         public MyCommands Commands { get; set; }
         public MainViewModel(EventAggregator eventAggregator)
         {
-            _VMImportedData = new Data();  
+            _VMImportedData = new Data();
             _eventAggregator = eventAggregator;
             _eventAggregator.Subscribe<JsonChangedMessage>(OnJsonChanged);
             FilteredData = _VMImportedData.importedProfiles;
             Commands = new MyCommands(eventAggregator);
-            
+            Data.GarbageCleaner();
+
         }
 
         private Data? _VMImportedData;
@@ -48,7 +49,7 @@ namespace AddressBook.Viewmodels
         private List<ContactProfile>? _filteredData;
         public List<ContactProfile>? FilteredData
         {
-            get =>_filteredData;
+            get => _filteredData;
             set
             {
                 _filteredData = value;
