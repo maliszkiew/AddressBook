@@ -1,0 +1,105 @@
+﻿<mah:MetroWindow x:Class="AddressBook.ProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:componentModel="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AddressBook"
+        xmlns:viewmodels="clr-namespace:AddressBook.Viewmodels"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                 ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        TitleCharacterCasing="Normal"
+        Title="Profile" Height="800" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="11.25*"/>
+            <RowDefinition Height="11.25*"/>
+            <RowDefinition Height="11.25*"/>
+            <RowDefinition Height="11.25*"/>
+            <RowDefinition Height="11.25*"/>
+            <RowDefinition Height="11.25*"/>
+            <RowDefinition Height="11.25*"/>
+            <RowDefinition Height="11.25*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <Style TargetType="Label">
+                <Setter Property="FontWeight" Value="UltraLight"/>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="BorderBrush" Value="#406DA1"/>
+                <Setter Property="Height" Value="35"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="Padding" Value="5,0,0,0"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+            </Style>
+        </Grid.Resources>
+        <Rectangle Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="0" Grid.RowSpan="10" Opacity="0.3">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#020024" Offset="0"/>
+                    <GradientStop Color="#3d55c6" Offset="0.5"/>
+                    <GradientStop Color="#00d4ff" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Button 
+            Cursor="Hand"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"
+            Width="300"
+            Height="400"
+            Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="3"
+            Command="{Binding ChangeImageCommand}">
+            <Image
+               x:Name="Picture"
+               Stretch="Fill"
+               Source="{Binding ImagePath}" 
+            />
+        </Button>
+        <!--First name-->
+        <Label Margin="38,40,0,0" Foreground="GhostWhite" Grid.Column="3" Grid.Row="1"  Content="First name: " FontSize="25"   HorizontalAlignment="Left" VerticalAlignment="Top" Width="Auto" Grid.ColumnSpan="2"/>
+        <TextBox Margin="66,47,0,0"  Foreground="GhostWhite" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="1" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="150" BorderThickness="1" Text="{Binding FirstName}" Grid.RowSpan="3"/>
+        <!--Last name-->
+        <Label Margin="38,65,0,0" Foreground="GhostWhite" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="2"  Content="Last name: " FontSize="25"   HorizontalAlignment="Left" VerticalAlignment="Top" Width="Auto" Grid.RowSpan="2"/>
+        <TextBox Margin="66,68,0,0" Foreground="GhostWhite" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="2" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="150" BorderThickness="1" Text="{Binding LastName}" Grid.RowSpan="3"/>
+        <!--Group-->
+        <Label Margin="4,50,0,0" Foreground="GhostWhite" Grid.Column="1" Grid.Row="4" Content="Group: " FontSize="20"   HorizontalAlignment="Left" VerticalAlignment="Top" Width="Auto" RenderTransformOrigin="0.524,1.406"/>
+        <ComboBox  Padding="10,0,0,0" Foreground="GhostWhite" SelectedValue="{Binding Group}" SelectedValuePath="Content" HorizontalAlignment="Left" FontSize="20" BorderThickness="1" Grid.Column="1" Grid.Row="4" Height="35" MaxDropDownHeight="150" Width="140" Margin="77,52,0,1" Grid.ColumnSpan="3" VerticalAlignment="Top" Grid.RowSpan="2">
+            <ComboBoxItem Foreground="GhostWhite" FontSize="20" Content="Friends" />
+            <ComboBoxItem Foreground="GhostWhite" FontSize="20" Content="Family" />
+            <ComboBoxItem Foreground="GhostWhite" FontSize="20" Content="Work" />
+            <ComboBoxItem Foreground="GhostWhite" FontSize="20" Content="None" />
+        </ComboBox>
+        <!--Phone number-->
+        <Label Margin="16,50,0,0" Foreground="GhostWhite" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="4" Content="Phone number: " FontSize="20"   HorizontalAlignment="Left" VerticalAlignment="Top" Width="Auto"/>
+        <TextBox Margin="66,52,0,0" Foreground="GhostWhite" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="4"  HorizontalAlignment="Left" VerticalAlignment="Top"  Width="150" BorderThickness="1" Text="{Binding PhoneNumber}" Grid.RowSpan="2"/>
+        <!--Email-->
+        <Label Grid.Row="6" Foreground="GhostWhite" Content="E-mail: " FontSize="20"   HorizontalAlignment="Left" VerticalAlignment="Top" Width="Auto" RenderTransformOrigin="-0.136,0.631" Margin="0,20,0,0" Grid.Column="1"/>
+        <TextBox Grid.Column="1" Foreground="GhostWhite" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="148" BorderThickness="1" Text="{Binding EMail}" Margin="77,24,0,0" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+        <!--Address-->
+        <Label Foreground="GhostWhite" Margin="41,20,0,0" Grid.Column="3" Grid.Row="6" Content="Adress: " FontSize="20"   HorizontalAlignment="Left" VerticalAlignment="Top" Width="Auto" Grid.ColumnSpan="2"/>
+        <TextBox Foreground="GhostWhite" Margin="14,24,0,0" Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="202" BorderThickness="1" Text="{Binding Address}" Grid.RowSpan="2"/>
+        <!--Save button-->
+        <Button Command="{Binding Commands.SaveProfileChangesCommand}" CommandParameter="{Binding ProfileVMImportedData}" Click="CloseWindow" FontStyle="Italic" Grid.Column="2" Margin="10,30,0,30" Grid.Row="7" >
+            <TextBlock Text="Save" Foreground="GhostWhite" FontSize="14"  FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        </Button>
+        <Button Padding="0,0,0,0" Command="{Binding Commands.DeleteProfileCommand}" CommandParameter="{Binding ID}" Click="CloseWindow" Grid.Column="4" Margin="0,30,10,30" Grid.Row="7" Width="98" >
+            <Button.Content>
+                <iconPacks:PackIconFeatherIcons  Padding="0,0,0,0" Foreground="GhostWhite" Kind="Trash2" Width="140"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="20"/>
+            </Button.Content>
+        </Button>
+    </Grid>
+</mah:MetroWindow>

@@ -1,0 +1,263 @@
+[
+  {
+    "Id": 1,
+    "firstName": "John",
+    "lastName": "Doe",
+    "phoneNumber": "555-555-5555",
+    "email": "johndoe@example.com",
+    "address": "123 Main St.",
+    "group": "Friends"
+  },
+  {
+    "Id": 2,
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "phoneNumber": "555-555-5556",
+    "email": "janedoe@example.com",
+    "address": "456 Main St.",
+    "group": "Family"
+  },
+  {
+    "Id": 3,
+    "firstName": "Jim",
+    "lastName": "Smith",
+    "phoneNumber": "555-555-5557",
+    "email": "jimsmith@example.com",
+    "address": "125 Main St.",
+    "group": "Work"
+  },
+  {
+    "Id": 4,
+    "firstName": "John",
+    "lastName": "Johnson",
+    "phoneNumber": "555-555-5558",
+    "email": "johnjohnson@example.com",
+    "address": "126 Main St.",
+    "group": "Friends"
+  },
+  {
+    "Id": 5,
+    "firstName": "Jane",
+    "lastName": "Brown",
+    "phoneNumber": "555-555-5559",
+    "email": "janebrown@example.com",
+    "address": "127 Main St.",
+    "group": "Family"
+  },
+  {
+    "Id": 6,
+    "firstName": "Jim",
+    "lastName": "Williams",
+    "phoneNumber": "555-555-5560",
+    "email": "jimwilliams@example.com",
+    "address": "128 Main St.",
+    "group": "Work"
+  },
+  {
+    "Id": 7,
+    "firstName": "John",
+    "lastName": "Jones",
+    "phoneNumber": "555-555-5561",
+    "email": "johnjones@example.com",
+    "address": "129 Main St.",
+    "group": "Friends"
+  },
+  {
+    "Id": 8,
+    "firstName": "Jane",
+    "lastName": "Miller",
+    "phoneNumber": "555-555-5562",
+    "email": "janemiller@example.com",
+    "address": "130 Main St.",
+    "group": "Family"
+  },
+  {
+    "Id": 9,
+    "firstName": "Jim",
+    "lastName": "Davis",
+    "phoneNumber": "555-555-5563",
+    "email": "jimdavis@example.com",
+    "address": "131 Main St.",
+    "group": "Work"
+  },
+  {
+    "Id": 10,
+    "firstName": "John",
+    "lastName": "Garcia",
+    "phoneNumber": "555-555-5564",
+    "email": "johngarcia@example.com",
+    "address": "132 Main St.",
+    "group": "Friends"
+  },
+  {
+    "Id": 11,
+    "firstName": "Joanna",
+    "lastName": "Garcia",
+    "phoneNumber": "525-555-5564",
+    "email": "joannagarcia@example.com",
+    "address": "13 Main St.",
+    "group": "Friends"
+  },
+  {
+    "Id": 12,
+    "firstName": "Jane",
+    "lastName": "Martinez",
+    "phoneNumber": "555-555-5565",
+    "email": "janemartinez@example.com",
+    "address": "134 Main St.",
+    "group": "Family"
+  },
+  {
+    "Id": 13,
+    "firstName": "Jim",
+    "lastName": "Anderson",
+    "phoneNumber": "555-555-5566",
+    "email": "jimanderson@example.com",
+    "address": "135 Main St.",
+    "group": "Work"
+  },
+  {
+    "Id": 14,
+    "firstName": "John",
+    "lastName": "Taylor",
+    "phoneNumber": "555-555-5567",
+    "email": "johntaylor@example.com",
+    "address": "136 Main St.",
+    "group": "Friends"
+  },
+  {
+    "Id": 15,
+    "firstName": "Jane",
+    "lastName": "Thomas",
+    "phoneNumber": "555-555-5568",
+    "email": "janethomas@example.com",
+    "address": "137 Main St.",
+    "group": "Family"
+  },
+  {
+    "Id": 16,
+    "firstName": "Jim",
+    "lastName": "Moore",
+    "phoneNumber": "555-555-5569",
+    "email": "jimmoore@example.com",
+    "address": "138 Main St.",
+    "group": "Work"
+  },
+  {
+    "Id": 17,
+    "firstName": "John",
+    "lastName": "Jackson",
+    "phoneNumber": "555-555-5570",
+    "email": "johnjackson@example.com",
+    "address": "139 Main St.",
+    "group": "Friends"
+  },
+  {
+    "Id": 18,
+    "firstName": "Jane",
+    "lastName": "White",
+    "phoneNumber": "555-555-5571",
+    "email": "janewhite@example.com",
+    "address": "140 Main St.",
+    "group": "Family"
+  },
+  {
+    "Id": 19,
+    "firstName": "Jim",
+    "lastName": "Harris",
+    "phoneNumber": "555-555-5572",
+    "email": "jimharris@example.com",
+    "address": "141 Main St.",
+    "group": "Work"
+  },
+  {
+    "Id": 20,
+    "firstName": "John",
+    "lastName": "Martin",
+    "phoneNumber": "555-555-5573",
+    "email": "johnmartin@example.com",
+    "address": "142 Main St.",
+    "group": "Friends"
+  },
+  {
+    "Id": 21,
+    "firstName": "Jaaane",
+    "lastName": "Martinez",
+    "phoneNumber": "555-555-5565",
+    "email": "janemartinez@example.com",
+    "address": "134 Main St.",
+    "group": "Family"
+  },
+  {
+    "Id": 22,
+    "firstName": "Tom",
+    "lastName": "Anderson",
+    "phoneNumber": "555-555-5566",
+    "email": "jimanderson@example.com",
+    "address": "135 Main St.",
+    "group": "Work"
+  },
+  {
+    "Id": 23,
+    "firstName": "Johann",
+    "lastName": "Taylor",
+    "phoneNumber": "555-555-5267",
+    "email": "johntaylor@example.com",
+    "address": "136 Main St.",
+    "group": "Friends"
+  },
+  {
+    "Id": 24,
+    "firstName": "Pane",
+    "lastName": "Thomas",
+    "phoneNumber": "555-555-5568",
+    "email": "janethomas@example.com",
+    "address": "137 Main St.",
+    "group": "Family"
+  },
+  {
+    "Id": 25,
+    "firstName": "Kim",
+    "lastName": "Moore",
+    "phoneNumber": "555-555-5569",
+    "email": "jimmoore@example.com",
+    "address": "138 Main St.",
+    "group": "Work"
+  },
+  {
+    "Id": 26,
+    "firstName": "Johnie",
+    "lastName": "Jackson",
+    "phoneNumber": "555-555-5570",
+    "email": "johnjackson@example.com",
+    "address": "139 Main St.",
+    "group": "Friends"
+  },
+  {
+    "Id": 27,
+    "firstName": "Kanee",
+    "lastName": "White",
+    "phoneNumber": "555-555-5571",
+    "email": "janewhite@example.com",
+    "address": "140 Main St.",
+    "group": "Family"
+  },
+  {
+    "Id": 28,
+    "firstName": "Tom",
+    "lastName": "Harris",
+    "phoneNumber": "555-555-5572",
+    "email": "jimharris@example.com",
+    "address": "141 Main St.",
+    "group": "Work"
+  },
+  {
+    "Id": 29,
+    "firstName": "Jay",
+    "lastName": "Martin",
+    "phoneNumber": "555-555-5573",
+    "email": "johnmartin@example.com",
+    "address": "142 Main St.",
+    "group": "Friends"
+  }
+]
